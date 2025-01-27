@@ -11,6 +11,33 @@ public class Libros {
         this.autorLibro = autorLibro;
         this.editorialLibro = editorialLibro;
 
-        constructores, geters y setters,
+    }  
+
+    public void setFechaLibro(String fechaLibro){
+        this.fechaLibro = fechaLibro;
     }
+
+    public String getFechaLibro(){
+        return this.fechaLibro;
+    }  
+    
+    public void setnomLibro(String nomLibro){
+        this.nomLibro = nomLibro;
+    }
+    public String getnomLibro(){
+        return this.nomLibro;
+    }  
+    public void setautorLibro(String autorLibro){
+        this.autorLibro = autorLibro;
+    }
+    public String getautorLibro(){
+        return this.autorLibro;
+    }  
+      public void seteditorialLibro(String editorialLibro){
+        this.editorialLibro = editorialLibro;
+    }
+
+      public String geteditorialLibro(){
+        return this.editorialLibro;
+    }  
 }

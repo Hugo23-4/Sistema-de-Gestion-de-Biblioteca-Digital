@@ -9,6 +9,7 @@ public class Admin {
     private String verEstadisticas;
     private String verPrestamos;
     public Libros libros;
+    private int numLibros;
     
 
     public static void InicioSesion (String usuario, String contrasena) {
@@ -21,5 +22,8 @@ public class Admin {
         this.contrasena = contrasena;
     }
 
-    private crearLibro (String )
+    private void crearLibro (String fechaLibro, String nomLibro, String autorLibro, String editorialLibro){
+        Libros libros = new Libros(fechaLibro, nomLibro, autorLibro, editorialLibro);
+        this.numlibros++;
+    }
 }
