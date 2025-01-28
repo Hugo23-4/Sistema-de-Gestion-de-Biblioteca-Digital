@@ -1,15 +1,20 @@
+/** @author Hugo Pérez Muñoz */
 public class Libros {
 
     String fechaLibro;
-    String nomLibro;
-    String autorLibro;
-    String editorialLibro;
+    String NomLibro;
+    String AutorLibro;
+    String EditorialLibro;
+    private String categoria;
+    private boolean prestado;
 
-    public Libros(String fechaLibro, String nomLibro, String autorLibro, String editorialLibro) {
+    public Libros(String fechaLibro, String nomLibro, String autorLibro, String editorialLibro, String categoria) {
         this.fechaLibro = fechaLibro;
-        this.nomLibro = nomLibro;
-        this.autorLibro = autorLibro;
-        this.editorialLibro = editorialLibro;
+        this.NomLibro = nomLibro;
+        this.AutorLibro = autorLibro;
+        this.EditorialLibro = editorialLibro;
+        this.categoria = categoria;
+        this.prestado = false;
 
     }  
 
@@ -21,23 +26,48 @@ public class Libros {
         return this.fechaLibro;
     }  
     
-    public void setnomLibro(String nomLibro){
-        this.nomLibro = nomLibro;
+    public void setNomLibro(String nomLibro){
+        this.NomLibro = nomLibro;
     }
-    public String getnomLibro(){
-        return this.nomLibro;
+    public String getNomLibro(){
+        return this.NomLibro;
     }  
-    public void setautorLibro(String autorLibro){
-        this.autorLibro = autorLibro;
+    public void setAutorLibro(String autorLibro){
+        this.AutorLibro = autorLibro;
     }
-    public String getautorLibro(){
-        return this.autorLibro;
+    public String getAutorLibro(){
+        return this.AutorLibro;
     }  
-      public void seteditorialLibro(String editorialLibro){
-        this.editorialLibro = editorialLibro;
+    public void setEditorialLibro(String editorialLibro){
+        this.EditorialLibro = editorialLibro;
     }
 
-      public String geteditorialLibro(){
-        return this.editorialLibro;
-    }  
+    public String getEditorialLibro(){
+        return this.EditorialLibro;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public boolean isPrestado() {
+        return prestado;
+    }
+
+    public void setPrestado(boolean prestado) {
+        this.prestado = prestado;
+    }
+
+
+    @Override
+    public String toString() {
+        return "{" +
+            " fechaLibro='" + getFechaLibro() + "'" +
+            ", nomLibro='" + getNomLibro() + "'" +
+            ", autorLibro='" + getAutorLibro() + "'" +
+            ", editorialLibro='" + getEditorialLibro() + "'" +
+            ", categoria='" + getCategoria() + "'" +
+            ", prestado='" + isPrestado() + "'" +
+            "}";
+    }
 }
