@@ -13,13 +13,14 @@ public class Admin {
     
 
     public static void InicioSesion (String usuario, String contrasena) {
-        this.usuario = ();
+        this.usuario = usuario;
         this.contrasena = contrasena;
     }
 
     public static void crearUsuario (String usuario, String contrasena) {
         this.usuario = usuario;
         this.contrasena = contrasena;
+        System.out.println("Usuario creado con éxito.");
     }
 
     private void crearLibro (String fechaLibro, String nomLibro, String autorLibro, String editorialLibro){
