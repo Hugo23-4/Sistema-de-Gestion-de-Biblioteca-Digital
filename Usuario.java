@@ -1,33 +1,26 @@
+/** @author Javier Gil Galan */
+
 public class Usuario {
-    private String usuario;
-    private String contrasena;
-    private String verLibros;
-    public Libros libros;
-    private int numLibros;
-    private int CogerLibro;
-    private int DejarLibro;
-    
-    public Usuario(String usuario, String contrasena) {
-        this.usuario = usuario;
+    protected String nombre;
+    protected String contrasena;
+
+    public Usuario(String nombre, String contrasena) {
+        this.nombre = nombre;
         this.contrasena = contrasena;
     }
 
-    private void CogerLibro (int CogerLibro){
-        if (this.numLibros < 3) {
-            this.numLibros++;
-            System.out.println("Libro cogido con éxito.");
-        } else {
-            System.out.println("No puedes coger más de 3 libros al mismo tiempo.");
-        }
+    public String getNombre() {
+        return nombre;
     }
 
-    private void DejarLibro(){
-        if (this.numLibros > 0) {
-            this.numLibros--;
-            System.out.println("Libro devuelto con éxito.");
-        } else {
-            System.out.println("No tienes libros cogidos para devolver.");
-        }
+    public String getContrasena() {
+        return contrasena;
     }
 
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "nombre='" + nombre + '\'' +
+                '}';
+    }
 }

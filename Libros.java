@@ -15,7 +15,6 @@ public class Libros {
         this.EditorialLibro = editorialLibro;
         this.categoria = categoria;
         this.prestado = false;
-
     }  
 
     public void setFechaLibro(String fechaLibro){

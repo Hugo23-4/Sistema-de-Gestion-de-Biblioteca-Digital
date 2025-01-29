@@ -1,7 +1,9 @@
-/** @author Hugo Pérez Muñoz */import java.util.ArrayList;
+/** @author Hugo Pérez Muñoz */
+
+import java.util.ArrayList;
 
 public class SistemaBiblioteca {
-    private ArrayList<Libro> libros;
+    private ArrayList<Libros> libros;
     private ArrayList<Usuario> usuarios;
 
     public SistemaBiblioteca() {
@@ -19,8 +21,8 @@ public class SistemaBiblioteca {
     }
 
     public void mostrarMenu(Usuario usuario) {
-        System.out.println("\n=== Menú Principal ===");
-        if (usuario.Admin()) {
+        System.out.println("\n Menú Principal ");
+        if (usuario instanceof Admin) {
             System.out.println("1. Agregar libro");
             System.out.println("2. Eliminar libro");
             System.out.println("3. Consultar usuarios");
@@ -34,8 +36,6 @@ public class SistemaBiblioteca {
     }
 
     public boolean ejecutarOpcion(Usuario usuario, int opcion) {
-        // Aquí irá la lógica para ejecutar las opciones según el rol del usuario
-        // Por ahora, devolvemos true para mantener el bucle activo
         return opcion != 0;
     }
 }
